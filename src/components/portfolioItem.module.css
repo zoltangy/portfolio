@@ -1,0 +1,80 @@
+.item {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.imageDiv {
+  /* background-image: linear-gradient(to right bottom, #cfd9df, #e2ebf0); */
+  background-image: linear-gradient(to right bottom, #f3fcfc, #ecf8f8);
+  margin: 0;
+  align-self: center;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0px 8px 13px -7px rgba(0, 0, 0, 0.8);
+}
+
+.image {
+  width: 100%;
+  margin: 0;
+}
+
+.textDiv {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.textDivText {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  white-space: pre-wrap;
+}
+
+.textDivLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: #098c8c;
+  display: inline-block;
+  position: relative;
+}
+
+.textDivLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  background-color: #098c8c;
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.textDivLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.divider {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dividerText {
+  padding: 5px;
+}
+
+.dividerLine {
+  flex: 1;
+  border-style: solid;
+  border-color: #098c8c;
+  border-width: 0 1px 0 0;
+}
