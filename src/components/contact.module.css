@@ -1,3 +1,8 @@
+.wrapper {
+  width: 90%;
+  max-width: 450px;
+}
+
 .inputs {
   border: none;
   border-radius: 3px;

@@ -31,7 +31,7 @@ export const Contact = () => {
   }
 
   return (
-    <div style={{ width: 400 }}>
+    <div className={styles.wrapper}>
       <h1>
         Need something done? Want to talk about a project? <br />
         Get in touch!
