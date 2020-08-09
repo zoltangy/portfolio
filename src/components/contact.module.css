@@ -18,6 +18,7 @@
 
 .field label {
   letter-spacing: normal;
+  transition: all 0.5s ease;
 }
 
 .field:focus-within label {
@@ -55,4 +56,10 @@
 .button:active {
   transform: translateY(4px);
   box-shadow: none;
+}
+
+.error {
+  color: rgb(156, 41, 41);
+  float: right;
+  font-size: small;
 }

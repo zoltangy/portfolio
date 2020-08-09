@@ -3,3 +3,53 @@
   flex-direction: column;
   align-items: center;
 }
+
+.iconLink,
+.iconLink:visited,
+.iconLink:active {
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.iconLink:hover {
+  color: #098c8c;
+}
+
+.icons {
+  right: 3%;
+  position: absolute;
+  top: 2%;
+}
+
+.headerDiv {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 -40px 40px -20px #f8f8f8;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+}
+
+.title {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 70%;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    top: 20%;
+    left: 40%;
+    width: 50%;
+    font-size: 36px;
+  }
+
+  .headerDiv {
+    height: 500px;
+  }
+}

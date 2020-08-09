@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './thanks.module.css'
+import styles from './404.module.css'
 
 const Thanks = () => {
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.h1}>Thank you, your message has been sent!</h1>
+      <h1 className={styles.h1}>404 - This page does not exist</h1>
       <Link className="link" to="/">
-        Back to the website
+        Go back to the website
       </Link>
     </div>
   )

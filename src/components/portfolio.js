@@ -94,7 +94,7 @@ const data = [
       link: 'https://zoltangy.github.io/web-calculator/',
     },
     code: {
-      text: 'CRA, JavaScript, React, Styled components',
+      text: 'CRA, React, Styled components',
       link: 'https://github.com/zoltangy/web-calculator',
     },
   },

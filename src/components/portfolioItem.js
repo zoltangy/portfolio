@@ -7,18 +7,25 @@ export const PortfolioItem = ({ image, description, code }) => {
       <div className={styles.imageDiv}>
         <img src={image.src} alt={image.alt} className={styles.image} />
       </div>
-      <Description text={description.text} link={description.link} />
-      <VDivider />
-      <Tech text={code.text} link={code.link} />
+      <div className={styles.textDiv}>
+        <Description text={description.text} link={description.link} />
+        <VDivider />
+        <Tech text={code.text} link={code.link} />
+      </div>
     </div>
   )
 }
 
 const Description = ({ text, link }) => (
-  <div className={styles.textDiv}>
+  <div className={styles.sectionDiv}>
     <div className={styles.textDivText}>{text}</div>
     {link.match(/^http/) ? (
-      <a className={styles.textDivLink} href={link}>
+      <a
+        className={`${styles.textDivLink} link`}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+      >
         View
       </a>
     ) : (
@@ -28,10 +35,15 @@ const Description = ({ text, link }) => (
 )
 
 const Tech = ({ text, link }) => (
-  <div className={styles.textDiv}>
+  <div className={styles.sectionDiv}>
     <div className={styles.textDivText}>{text}</div>
     {link.match(/^http/) ? (
-      <a className={styles.textDivLink} href={link}>
+      <a
+        className={`${styles.textDivLink} link`}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+      >
         Code
       </a>
     ) : (
