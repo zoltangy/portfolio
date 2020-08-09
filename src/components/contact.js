@@ -12,31 +12,10 @@ const encode = data => {
 }
 
 export const Contact = () => {
-  /*  const [state, setState] = React.useState({})
-
-  const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
-  }
-*/
   return (
     <div className={styles.wrapper} id="Contact">
-      <h1>
-        Need something done? Want to talk about a project? <br />
+      <h1 style={{ textAlign: 'center' }}>
+        Need help with a project? <br />
         Get in touch!
       </h1>
       <Formik
@@ -75,14 +54,14 @@ export const Contact = () => {
           >
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
-              <label>
+              <label htmlFor="bot-field">
                 Don’t fill this out:{' '}
                 <input name="bot-field" onChange={handleChange} />
               </label>
             </p>
             <p className={styles.field}>
-              <label>
-                Your name:
+              <label htmlFor="name">
+                Your name
                 <br />
                 <input
                   className={styles.inputs}
@@ -92,6 +71,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.name}
+                  id="name"
                 />
               </label>
               <span className={styles.error}>
@@ -100,8 +80,8 @@ export const Contact = () => {
             </p>
 
             <p className={styles.field}>
-              <label>
-                Your email:
+              <label htmlFor="email">
+                Your email
                 <br />
                 <input
                   className={styles.inputs}
@@ -111,6 +91,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
+                  id="email"
                 />
               </label>
               <span className={styles.error}>
@@ -118,8 +99,8 @@ export const Contact = () => {
               </span>
             </p>
             <p className={styles.field}>
-              <label>
-                Message:
+              <label htmlFor="message">
+                Message
                 <br />
                 <textarea
                   className={`${styles.inputs} ${styles.textarea}`}
@@ -128,6 +109,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.message}
+                  id="message"
                 />
               </label>
               <span className={styles.error}>
@@ -152,3 +134,11 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
   message: Yup.string().required('Required'),
 })
+
+export const HiddenContactForm = () => (
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+)

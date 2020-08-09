@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .iconLink,
@@ -9,8 +10,8 @@
 .iconLink:active {
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
-  margin-left: 15px;
-  font-size: 20px;
+  margin-left: 1em;
+  font-size: 1.1em;
   text-decoration: none;
 }
 
@@ -27,29 +28,30 @@
 .headerDiv {
   height: 400px;
   width: 100%;
+  padding: 0 5%;
   overflow: hidden;
   box-shadow: inset 0 -40px 40px -20px #f8f8f8;
   background-image: url('../images/bg.jpg');
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 70%;
-  font-size: 28px;
+  font-size: 1.7em;
+}
+
+.sectionHeader {
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
   .title {
-    top: 20%;
-    left: 40%;
-    width: 50%;
-    font-size: 36px;
+    font-size: 2.5em;
   }
 
   .headerDiv {
-    height: 500px;
+    height: 100vh;
   }
 }

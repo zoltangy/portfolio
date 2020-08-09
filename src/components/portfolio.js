@@ -1,16 +1,16 @@
 import React from 'react'
 import { PortfolioItem } from './portfolioItem'
 import pomo from '../images/pomo.png'
-import mock from '../images/mock.png'
 import pwaInstall from '../images/pwa_install.png'
 import foodstash from '../images/foodstash.png'
 import portfolio from '../images/portfolio.png'
 import calculator from '../images/calculator.png'
+import eva from '../images/eva.png'
 
 const data = [
   {
     image: {
-      src: mock,
+      src: eva,
       alt: 'dietitian app',
     },
     description: {

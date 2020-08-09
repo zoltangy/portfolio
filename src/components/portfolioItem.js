@@ -29,7 +29,7 @@ const Description = ({ text, link }) => (
         View
       </a>
     ) : (
-      link
+      <span className={styles.italic}>{link}</span>
     )}
   </div>
 )

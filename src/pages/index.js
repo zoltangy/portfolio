@@ -2,22 +2,24 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa'
 import { Link } from 'react-scroll'
+import Div100vh from 'react-div-100vh'
 //--
 import styles from './index.module.css'
 import { Logo } from '../components/logo'
 import { Divider } from '../components/divider'
-import { Contact } from '../components/contact'
+import { Contact, HiddenContactForm } from '../components/contact'
 import { Portfolio } from '../components/portfolio'
 
 export default function Home() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setVisible(true), 5000)
+    setTimeout(() => setVisible(true), 4900)
   }, [])
 
   return (
     <>
+      <HiddenContactForm />
       <motion.div
         style={{ zIndex: 1000 }}
         initial={{
@@ -30,7 +32,7 @@ export default function Home() {
         }}
         animate={{
           width: '15%',
-          maxWidth: '200px',
+          maxWidth: '180px',
           minWidth: '100px',
           position: 'absolute',
           top: '2%',
@@ -39,7 +41,7 @@ export default function Home() {
         }}
         transition={{
           delay: 4.0,
-          duration: 1.5,
+          duration: 0.7,
           ease: 'backIn',
         }}
       >
@@ -48,15 +50,14 @@ export default function Home() {
       <AnimatePresence>
         {visible && (
           <motion.div
-            initial={{ opacity: 0 /*, x: '100vw' */ }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              /*x: { type: 'spring', stiffness: 75 },*/
-              opacity: { delay: 1, duration: 1.5 },
+              opacity: { duration: 1.0 },
             }}
           >
             <div className={styles.center}>
-              <div className={styles.headerDiv}>
+              <Div100vh className={styles.headerDiv}>
                 <div className={styles.icons}>
                   <a
                     href="https://github.com/zoltangy"
@@ -89,15 +90,36 @@ export default function Home() {
                   </Link>
                 </div>
                 <h1 className={styles.title}>
-                  Creating intuitively usable, aesthetically pleasing things for
-                  the web
+                  Creating intuitively usable,
+                  <br /> aesthetically pleasing things
+                  <br /> for web and mobile.
                 </h1>
-              </div>
+              </Div100vh>
               <Divider />
-              <h1>Sample work</h1>
+              <h1 className={styles.sectionHeader}>Sample work</h1>
               <Portfolio />
               <Divider />
               <Contact />
+              <div>
+                <a
+                  href="https://github.com/zoltangy"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.iconLink}
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/zoltangy"
+                  title="LinkedIn"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.iconLink}
+                >
+                  <FaLinkedinIn />
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

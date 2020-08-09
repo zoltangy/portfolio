@@ -1,6 +1,7 @@
 .wrapper {
   width: 90%;
   max-width: 450px;
+  margin-bottom: 20px;
 }
 
 .inputs {
