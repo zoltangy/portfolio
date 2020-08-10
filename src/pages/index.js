@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Zoltan's portfolio</title>
         <meta name="author" content="Zoltan Gyarmati" />
