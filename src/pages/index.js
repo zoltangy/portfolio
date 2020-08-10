@@ -60,7 +60,7 @@ export default function Home() {
         }}
         transition={{
           delay: 4.0,
-          duration: 0.7,
+          duration: 0.8,
           ease: 'backIn',
         }}
       >
@@ -72,7 +72,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              opacity: { duration: 1.0 },
+              opacity: { duration: 1.5 },
             }}
           >
             <div className={styles.center}>
