@@ -48,17 +48,10 @@ export const Contact = () => {
             name="contact"
             method="post"
             action="/thanks/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label htmlFor="bot-field">
-                Don’t fill this out:{' '}
-                <input name="bot-field" onChange={handleChange} />
-              </label>
-            </p>
+            <input type="hidden" name="bot-field" />
             <p className={styles.field}>
               <label htmlFor="name">
                 Your name
@@ -136,9 +129,11 @@ const validationSchema = Yup.object().shape({
 })
 
 export const HiddenContactForm = () => (
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="text" name="name" />
     <input type="email" name="email" />
-    <textarea name="message"></textarea>
+    <textarea name="message" />
+    <input type="hidden" name="bot-field" />
+    <input type="hidden" name="form-name" value="contact" />
   </form>
 )

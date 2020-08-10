@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import Div100vh from 'react-div-100vh'
+import { Helmet } from 'react-helmet'
 //--
 import styles from './index.module.css'
 import { Logo } from '../components/logo'
@@ -19,6 +20,24 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Zoltan's portfolio</title>
+        <meta name="author" content="Zoltan Gyarmati" />
+        <meta name="description" content="Portfolio page" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+      </Helmet>
       <HiddenContactForm />
       <motion.div
         style={{ zIndex: 1000 }}
