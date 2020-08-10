@@ -5,20 +5,6 @@
   margin-bottom: 60px;
 }
 
-.iconLink,
-.iconLink:visited,
-.iconLink:active {
-  color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  margin-left: 1em;
-  font-size: 1.1em;
-  text-decoration: none;
-}
-
-.iconLink:hover {
-  color: #098c8c;
-}
-
 .icons {
   right: 3%;
   position: absolute;
