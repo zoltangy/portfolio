@@ -8,9 +8,7 @@ module.exports = {
   /* Your site config here */
   pathPrefix: '/portfolio',
   plugins: [
-    {
-      plugins: [`gatsby-plugin-react-helmet`],
-    },
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
