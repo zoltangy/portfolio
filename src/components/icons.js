@@ -40,5 +40,3 @@ export const ContactIcon = () => (
     <FaRegEnvelope />
   </Link>
 )
-
-export const ScrollIcon = () => <div className={styles.scrollIcon}></div>

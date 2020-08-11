@@ -6,13 +6,12 @@
 }
 
 .icons {
-  right: 3%;
   position: absolute;
+  right: 3%;
   top: 2%;
 }
 
 .headerDiv {
-  height: 400px;
   width: 100%;
   padding: 0 5%;
   overflow: hidden;
@@ -33,12 +32,13 @@
   margin-bottom: 50px;
 }
 
+.scrollIconDiv {
+  position: absolute;
+  bottom: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .title {
     font-size: 2.5em;
-  }
-
-  .headerDiv {
-    height: 100vh;
   }
 }
